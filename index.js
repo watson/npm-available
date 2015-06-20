@@ -8,7 +8,7 @@ var name = process.argv[2]
 
 if (!name) {
   console.error('ERROR: No module name specified!')
-  console.error('Usage: ' + pkg.name + ' module-name')
+  console.error('Usage: ' + pkg.name + ' [module-name]')
   process.exit(1)
   return
 }
