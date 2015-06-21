@@ -28,8 +28,8 @@ if (!name) {
 
 var opts = {
   method: 'HEAD',
-  host: 'www.npmjs.com',
-  path: '/package/' + name,
+  host: 'registry.npmjs.com',
+  path: '/' + name,
   headers: {
     'User-Agent': pkg.name + '/' + pkg.version
   }
