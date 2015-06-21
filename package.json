@@ -1,6 +1,6 @@
 {
   "name": "npm-available",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI to check if a given module name is available on npm",
   "main": "index.js",
   "scripts": {
