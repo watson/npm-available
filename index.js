@@ -30,19 +30,16 @@ var req = https.request(opts, function (res) {
   switch (res.statusCode) {
     case 200:
       console.log('To late! %s is taken :(', name)
+      process.exit(1)
       break
     case 404:
       console.log('%s is available :)', name)
+      process.exit()
       break
     default:
       console.error('Unknown status code returned from npm: ' + res.statusCode)
+      process.exit(1)
   }
-
-  res.on('end', function () {
-    if (!~[200, 404].indexOf(res.statusCode)) process.exit(1)
-  })
-
-  res.resume()
 })
 
 req.on('error', function (err) {

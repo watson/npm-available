@@ -25,6 +25,9 @@ Where `name` is the name of a module you whish to check.
   --version, -v  show version
 ```
 
+The command will exit with a non-zero exit code if the module name is
+already taken.
+
 ## License
 
 MIT
