@@ -14,7 +14,7 @@ After you've installed npm-available globally, just run:
 
 ```
 $ npm-available my-awesome-module
-Too late! foobar is taken :(
+Too late! my-awesome-module is taken :(
 ```
 
 ## API
