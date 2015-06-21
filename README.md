@@ -8,9 +8,15 @@ CLI to check if a given module name is available on npm.
 npm install -g npm-available
 ```
 
-## Usage
+## Example Usage
 
 After you've installed npm-available globally, just run:
+
+```
+npm-available my-awesome-module
+```
+
+## API
 
 ```
 npm-available [options] [name]
