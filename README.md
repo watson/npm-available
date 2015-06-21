@@ -1,5 +1,7 @@
 # npm-available
 
+CLI to check if a given module name is available on npm.
+
 ## Installation
 
 ```
