@@ -13,7 +13,8 @@ npm install -g npm-available
 After you've installed npm-available globally, just run:
 
 ```
-npm-available my-awesome-module
+$ npm-available my-awesome-module
+Too late! foobar is taken :(
 ```
 
 ## API
