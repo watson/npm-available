@@ -7,12 +7,21 @@ var argv = require('minimist')(process.argv.slice(2))
 
 var name = argv._[0]
 
+var log = {
+  info: function () {
+    if (!argv.quiet && !argv.q) console.log.apply(console.log, arguments)
+  },
+  error: function () {
+    if (!argv.quiet && !argv.q) console.error.apply(console.error, arguments)
+  }
+}
+
 if (argv.help || argv.h) return help()
 if (argv.version || argv.v) return version()
 
 if (!name) {
-  console.error('ERROR: No module name specified!')
-  console.error('Run `' + pkg.name + ' --help` for more info')
+  log.error('ERROR: No module name specified!')
+  log.error('Run `' + pkg.name + ' --help` for more info')
   process.exit(1)
   return
 }
@@ -29,34 +38,34 @@ var opts = {
 var req = https.request(opts, function (res) {
   switch (res.statusCode) {
     case 200:
-      console.log('To late! %s is taken :(', name)
+      log.info('Too late! %s is taken :(', name)
       process.exit(1)
       break
     case 404:
-      console.log('%s is available :)', name)
+      log.info('%s is available :)', name)
       process.exit()
       break
     default:
-      console.error('Unknown status code returned from npm: ' + res.statusCode)
+      log.error('Unknown status code returned from npm: ' + res.statusCode)
       process.exit(1)
   }
 })
 
 req.on('error', function (err) {
-  console.error('ERROR:', err.message)
-  console.error('Check that you are connected to the internet at try again')
+  log.error('ERROR:', err.message)
+  log.error('Check that you are connected to the internet at try again')
   process.exit(1)
 })
 
 req.on('close', function () {
-  console.error('ERROR: Connection with npm close unexpectedly - try agian')
+  log.error('ERROR: Connection with npm close unexpectedly - try agian')
   process.exit(1)
 })
 
 req.end()
 
 function help () {
-  console.log(
+  log.info(
     pkg.name + ' ' + pkg.version + '\n' +
     pkg.description + '\n\n' +
     'Usage:\n' +
@@ -70,6 +79,6 @@ function help () {
 }
 
 function version () {
-  console.log(pkg.version)
+  log.info(pkg.version)
   process.exit()
 }

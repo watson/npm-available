@@ -23,6 +23,7 @@ Where `name` is the name of a module you whish to check.
 ```
   --help, -h     show this help
   --version, -v  show version
+  --quiet, -q    don't output anything (check the exit code instead)
 ```
 
 The command will exit with a non-zero exit code if the module name is
