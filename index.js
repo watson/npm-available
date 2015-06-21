@@ -16,7 +16,10 @@ if (!name) {
 var opts = {
   method: 'HEAD',
   host: 'www.npmjs.com',
-  path: '/package/' + name
+  path: '/package/' + name,
+  headers: {
+    'User-Agent': pkg.name + '/' + pkg.version
+  }
 }
 
 var req = https.request(opts, function (res) {
