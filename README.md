@@ -13,10 +13,17 @@ npm install -g npm-available
 After you've installed npm-available globally, just run:
 
 ```
-npm-available [module-name]
+npm-available [options] [name]
 ```
 
-Where `module-name` is the name of a module you whish to check.
+Where `name` is the name of a module you whish to check.
+
+**Options:**
+
+```
+  --help, -h     show this help
+  --version, -v  show version
+```
 
 ## License
 

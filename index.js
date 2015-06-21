@@ -1,14 +1,18 @@
 #!/usr/bin/env node
 'use strict'
 
-var https = require('https')
 var pkg = require('./package')
+var https = require('https')
+var argv = require('minimist')(process.argv.slice(2))
 
-var name = process.argv[2]
+var name = argv._[0]
+
+if (argv.help || argv.h) return help()
+if (argv.version || argv.v) return version()
 
 if (!name) {
   console.error('ERROR: No module name specified!')
-  console.error('Usage: ' + pkg.name + ' [module-name]')
+  console.error('Run `' + pkg.name + ' --help` for more info')
   process.exit(1)
   return
 }
@@ -53,3 +57,22 @@ req.on('close', function () {
 })
 
 req.end()
+
+function help () {
+  console.log(
+    pkg.name + ' ' + pkg.version + '\n' +
+    pkg.description + '\n\n' +
+    'Usage:\n' +
+    '  ' + pkg.name + ' [options] [name]\n\n' +
+    'Options:\n' +
+    '  --help, -h     show this help\n' +
+    '  --version, -v  show version\n' +
+    '  --quiet, -q    don\'t output anything (check the exit code instead)'
+  )
+  process.exit()
+}
+
+function version () {
+  console.log(pkg.version)
+  process.exit()
+}
