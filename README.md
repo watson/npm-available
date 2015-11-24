@@ -13,7 +13,7 @@ To use on the command line, install globally using:
 npm install -g npm-available
 ```
 
-To use programatically, install locally:
+To use programmatically, install locally:
 
 ```
 npm install --save npm-available
