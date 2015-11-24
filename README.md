@@ -2,6 +2,9 @@
 
 CLI to check if a given module name is available on npm.
 
+[![Build status](https://travis-ci.org/watson/npm-available.svg?branch=master)](https://travis-ci.org/watson/npm-available)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 ## Installation
 
 To use on the command line, install globally using:
