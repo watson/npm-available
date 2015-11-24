@@ -20,7 +20,7 @@ To use programmatically, install locally:
 npm install --save npm-available
 ```
 
-## CLI Usage
+## CLI
 
 After you've installed npm-available globally, just run:
 
@@ -29,7 +29,7 @@ $ npm-available my-awesome-module
 Too late! my-awesome-module is taken :(
 ```
 
-### Options
+### Usage
 
 ```
 npm-available [options] [name]
