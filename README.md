@@ -1,6 +1,7 @@
 # npm-available
 
-CLI to check if a given module name is available on npm.
+Check if a given module name is available on npm. Available as CLI and
+module API.
 
 [![Build status](https://travis-ci.org/watson/npm-available.svg?branch=master)](https://travis-ci.org/watson/npm-available)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
