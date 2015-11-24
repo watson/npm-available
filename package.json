@@ -1,6 +1,6 @@
 {
   "name": "npm-available",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Check if a given module name is available on npm - available as CLI & API",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/watson/npm-available",
   "coordinates": [
-    42.3534105,
-    -71.0624192
+    42.3534188,
+    -71.0623951
   ]
 }
